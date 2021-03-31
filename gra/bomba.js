@@ -129,8 +129,6 @@ function showWord(word, image) {
                     elem.data('dirY', -dirY);
                     newY = elem.offset().top;
                 }
-                console.log(elem.offset().left + " -> " + newX);
-                console.log(elem.offset().top + " -> " + newY);
                 elem.offset({left: newX, top: newY});
                 const newSpeed = speed * 0.99;
                 elem.data('speed', newSpeed);
@@ -142,7 +140,6 @@ function showWord(word, image) {
             }
             if (maxSpeed < 1) {
                 clearInterval(animation);
-                console.log("stopping animation");
             }
         }, 10);
     });
@@ -169,12 +166,12 @@ function handleCardDrop( event, ui ) {
 
     // If all the cards have been placed correctly then display a message
     // and reset the cards for another go
-    console.log(missingLetters);
     if ( missingLetters == 0 ) {
-        $('#successMessage').show();
+        const dialog = (wordCounter >= words.length ? '#end' : '#successMessage');
+        $(dialog).show();
         const width = 480;
         const height = 100;
-        $('#successMessage').animate( {
+        $(dialog).animate( {
             left: ($(window).width() - width)/2,
             top: ($(window).height() - height)/2,
             width: width,

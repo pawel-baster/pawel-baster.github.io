@@ -8,7 +8,7 @@ const animalImages = {
     "Orka": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/JumpingOrca.jpg/640px-JumpingOrca.jpg",
     "Lama": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Llama_lying_down.jpg/640px-Llama_lying_down.jpg",
     "Delfin": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Tursiops_aduncus%2C_Port_River%2C_Adelaide%2C_Australia_-_2003.jpg/640px-Tursiops_aduncus%2C_Port_River%2C_Adelaide%2C_Australia_-_2003.jpg",
-    "Wilk": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Canis_lupus_laying.jpg/481px-Canis_lupus_laying.jpg",
+    "Wilk": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Front_view_of_a_resting_Canis_lupus_ssp.jpg/615px-Front_view_of_a_resting_Canis_lupus_ssp.jpg",
     "Motyl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Tagpfauenauge.jpg/751px-Tagpfauenauge.jpg",
     "Amonit": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Ammonite_Asteroceras.jpg",
     "Kowal": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Pyrrhocoris_apterus2.jpg/320px-Pyrrhocoris_apterus2.jpg",

@@ -102,7 +102,7 @@ body {
 #card10.correct { background: violet; }
 
 
-#successMessage {
+.successMessage {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     position: absolute;
     width: 0;
@@ -139,4 +139,8 @@ body {
     background: transparent url(assets/bomb.gif) no-repeat;
     background-position: center;
     background-size: 50px;
+}
+
+#end {
+    display: none;
 }
