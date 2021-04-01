@@ -19,7 +19,7 @@ const animalImages = {
     "Żubr": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Bison_bonasus_%28Linnaeus_1758%29.jpg/640px-Bison_bonasus_%28Linnaeus_1758%29.jpg",
     "Ankylozaur": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ankylozaur_%28Ankylosaurus%29_-_JuraPark_Baltow_%281%29.JPG/640px-Ankylozaur_%28Ankylosaurus%29_-_JuraPark_Baltow_%281%29.JPG",
     "Elasmozaur": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Thalassomedon_haningtoni.jpg/350px-Thalassomedon_haningtoni.jpg",
-    "Dunkleosteus": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Dunkleosteus_intermedius.jpg",
+    "Dunkleosteus": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Dunkleosteus_Artist%27s_Impression.png/640px-Dunkleosteus_Artist%27s_Impression.png",
     "Jeleń": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cervus_elaphus_Luc_Viatour_5.jpg/480px-Cervus_elaphus_Luc_Viatour_5.jpg",
     "Kozica": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kozicewmnichowym.jpg/640px-Kozicewmnichowym.jpg",
     "Nietoperz": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Southern_bentwing_bat.jpg/640px-Southern_bentwing_bat.jpg",
