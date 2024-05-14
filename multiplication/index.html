@@ -19,13 +19,24 @@
           points: 0,
           index: 0,
           answer: null,
+          bannerClass: "",
+          bannerText: "&nbsp;",
           checkAnswer() {
             if (
               this.answer ==
               this.challenges[this.index].a * this.challenges[this.index].b
             ) {
               this.points++;
+              this.bannerText = "Poprawna odpowiedź!";
+              this.bannerClass = "alert alert-success";
+            } else {
+              this.bannerText = "Niestety, błąd...";
+              this.bannerClass = "alert alert-danger";
             }
+            setTimeout(() => {
+              this.bannerText = "&nbsp;";
+              this.bannerClass = "";
+            }, 1000);
             this.index++;
             this.answer = "";
           },
@@ -37,6 +48,11 @@
     <div class="container mt-5" x-data="alpineModel()">
       <template x-if="index < challenges.length">
         <div>
+          <div style="height: 100px">
+            <div :class="bannerClass" role="alert">
+              <span x-html="bannerText"></span>
+            </div>
+          </div>
           <div class="row">
             <span x-text="`Zadanie ${index + 1} z ${challenges.length}`"></span>
             <span x-text="`Punkty: ${points}`"></span>
@@ -57,8 +73,8 @@
         </div>
       </template>
       <template x-if="index >= challenges.length">
-        <div class="fs-1">
-          <span x-text="`Koniec gry! Uzyskałeś ${points} punktów.`"></span>
+        <div class="alert alert-success fs-1">
+          <span x-text="`Koniec gry! Uzyskane punkty: ${points}`"></span>
         </div>
       </template>
     </div>
