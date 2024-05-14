@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap & Alpine.js Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <script>
+      function alpineModel() {
+        return {
+          challenges: Array.from({ length: 5 }, () => ({
+            a: 2 + Math.floor(Math.random() * 8),
+            b: 2 + Math.floor(Math.random() * 8),
+          })),
+          points: 0,
+          index: 0,
+          answer: null,
+          checkAnswer() {
+            if (
+              this.answer ==
+              this.challenges[this.index].a * this.challenges[this.index].b
+            ) {
+              this.points++;
+            }
+            this.index++;
+            this.answer = "";
+          },
+        };
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container mt-5" x-data="alpineModel()">
+      <template x-if="index < challenges.length">
+        <div>
+          <div class="row">
+            <span x-text="`Zadanie ${index + 1} z ${challenges.length}`"></span>
+            <span x-text="`Punkty: ${points}`"></span>
+          </div>
+          <div class="fs-1">
+            <span x-text="challenges[index]?.a"></span>
+            &times;
+            <span x-text="challenges[index]?.b"></span>
+            =
+            <input
+              type="number"
+              class="text-center"
+              x-model="answer"
+              style="width: 10rem"
+              @keydown.enter="checkAnswer()"
+            />
+          </div>
+        </div>
+      </template>
+      <template x-if="index >= challenges.length">
+        <div class="fs-1">
+          <span x-text="`Koniec gry! Uzyskałeś ${points} punktów.`"></span>
+        </div>
+      </template>
+    </div>
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
+  </body>
+</html>
